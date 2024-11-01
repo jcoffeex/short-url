@@ -4,6 +4,6 @@
   },
 
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./static/global.css -o ./static/output.css --watch"
+    "tailwind": "npx tailwindcss -i ./static/css/global.css -o ./static/css/output.css --watch"
   }
 }

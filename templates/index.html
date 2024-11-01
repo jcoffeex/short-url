@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='styles.css') }}"
+      href="{{ url_for('static', filename='./css/styles.css') }}"
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='output.css') }}"
+      href="{{ url_for('static', filename='./css/output.css') }}"
     />
     <title>Encurtador de URL</title>
   </head>
@@ -18,7 +18,8 @@
       <h1 class="font-bold text-4xl uppercase">Encurtador de URL</h1>
     </header>
     <main>
-      <div
+      <form
+        id="urlForm"
         class="bg-white shadow-lg h-40 w-[500px] mt-12 p-8 mx-auto rounded-lg"
       >
         <h2 class="text-center text-2xl font-bold">
@@ -27,18 +28,23 @@
         <div class="flex flex-col items-center justify-center h-full w-full">
           <div class="flex gap-4">
             <input
+              id="urlInput"
+              name="url"
+              required
               class="border-2 outline-orange-500 w-4/5 pl-4"
               type="text"
               placeholder="Cole a URL aqui"
             />
             <button
+              type="submit"
               class="bg-orange-400 hover:bg-orange-500 duration-500 text-white rounded-md w-32 h-12"
             >
               Encurtar URL
             </button>
           </div>
         </div>
-      </div>
+      </form>
     </main>
+    <script src="../static/js/script.js"></script>
   </body>
 </html>

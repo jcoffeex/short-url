@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +9,19 @@
     href="{{url_for('static', filename='css/output.css')}}"">
   </head>
   <body>
-    <h1 class="text-red-700">testedads</h1>
+    <h1>Encurtador de URL</h1>
+    <form id="form" method="POST" action="{{ url_for('views.shorten_url') }}">
+      <label for="long_url">Cole sua URL longa:</label>
+      <input
+        class="border-4 border-stone-400"
+        type="url"
+        id="long_url"
+        name="long_url"
+        placeholder="Cole sua URL aqui"
+        required
+      />
+      <button type="submit">Encurtar</button>
+    </form>
   </body>
+  <script src="../static/js/script.js"></script>
 </html>

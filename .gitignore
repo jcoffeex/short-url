@@ -1,3 +1,5 @@
-__pycache__
+__pycache__/
+app/__pycache__
 .venv
 app/static/css/output.css
+urls.db

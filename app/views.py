@@ -18,7 +18,7 @@ def shorten_url():
 
         insert_url(long_url, short_code)
 
-        PRODUCTION = 'https://shorturl.onrender.com/';
+        PRODUCTION = 'https://short-url-dp9s.onrender.com/';
         short_url = f"{PRODUCTION}{short_code}"
         
         return jsonify({"short_url": short_url})

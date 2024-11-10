@@ -1,6 +1,6 @@
 const form = document.getElementById('form');
 const url = document.getElementById('long_url'); 
-const production = 'https://shorturl.onrender.com/';
+const production = 'https://short-url-dp9s.onrender.com/';
 const development = 'http://127.0.0.1:8000/';
 const apiUrl = window.location.hostname === "127.0.0.1" ? development : production;
 

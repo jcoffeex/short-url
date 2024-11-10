@@ -4,8 +4,7 @@ from .views import views
 from .models import init_db
 def create_app():
     app = Flask(__name__)
-    CORS(app, resources={r"/api/*": {"origins": ["http://localhost:5000"]}})
     init_db()
     app.register_blueprint(views)
-    
+    CORS(app, resources={r"/*": {"origins": ["http://127.0.0.1:8000", "https://shorturl.onrender.com"]}})
     return app

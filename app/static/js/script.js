@@ -1,12 +1,16 @@
 const form = document.getElementById('form');
-const url = document.getElementById('long_url');
+const url = document.getElementById('long_url'); 
+const production = 'https://shorturl.onrender.com/';
+const development = 'http://127.0.0.1:8000/';
+const apiUrl = window.location.hostname === "127.0.0.1" ? development : production;
+
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     const longUrl = url.value;
 
     try {
-        const res = await fetch("http://localhost:5000/", {
+        const res = await fetch(apiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

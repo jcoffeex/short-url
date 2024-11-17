@@ -64,6 +64,7 @@ npx tailwindcss -i ./app/static/css/input.css -o ./app/static/css/output.css --w
 ## Deployment
 
 Slow due to free service.
+
 https://short-url-dp9s.onrender.com/
 
 ## Video

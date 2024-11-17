@@ -2,6 +2,8 @@
 
 This project is a simple URL shortener using Flask for the back-end and Tailwind CSS for the front-end.
 
+<img src='screenshot.png' width='50%'/>
+
 ## Setup Guide
 
 ## Clone
@@ -61,4 +63,9 @@ npx tailwindcss -i ./app/static/css/input.css -o ./app/static/css/output.css --w
 
 ## Deployment
 
+Slow due to free service.
 https://short-url-dp9s.onrender.com/
+
+## Video
+
+<a href='https://fqvdbgearwiwcebrpbop.supabase.co/storage/v1/object/public/file/short-url.mp4'>Video link<a/>

@@ -2,7 +2,7 @@
 
 This project is a simple URL shortener using Flask for the back-end and Tailwind CSS for the front-end.
 
-<img src='screenshot.png' width='50%'/>
+<img src='screenshot.png' width='100%'/>
 
 ## Setup Guide
 

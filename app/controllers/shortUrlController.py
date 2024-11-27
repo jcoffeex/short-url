@@ -1,10 +1,10 @@
 from flask import Blueprint, render_template, request, jsonify, redirect
-from .models import insert_url, get_url_by_code
+from ..repositories.shortUrlRepository import insert_url, get_url_by_code
 import uuid
 
-views = Blueprint("views", __name__)
+controller = Blueprint("controllers", __name__)
 
-@views.route("/", methods=["GET", "POST"])
+@controller.route("/", methods=["GET", "POST"])
 def shorten_url():
     if request.method == "POST":
         data = request.get_json()
@@ -18,7 +18,7 @@ def shorten_url():
 
         insert_url(long_url, short_code)
 
-        PRODUCTION = 'http://127.0.0.1:8000/';
+        PRODUCTION = 'https://short-url-dp9s.onrender.com';
         short_url = f"{PRODUCTION}{short_code}"
         
         return jsonify({"short_url": short_url})
@@ -26,7 +26,7 @@ def shorten_url():
     
     return render_template("index.html")
 
-@views.route("/<short_code>")
+@controller.route("/<short_code>")
 def redirect_to_long_url(short_code):
     long_url = get_url_by_code(short_code)
     
